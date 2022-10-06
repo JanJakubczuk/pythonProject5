@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Candara;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        table {
+            padding: 5px;
+            margin: 0 35%;
+            background-color: red;
+        }
+        td {padding: 10px; border: 1px solid black;
+            background-color: white;
+        }
+        a.def {
+            padding:10px; color: red; text-decoration: none;
+        }
+        a.def:hover {text-decoration: underline}
+    </style>
+</head>
+<body>
+    <table border>
+        <td colspan="4">Platform: {{ platform.name }}</td>
+        {% for game in games %}
+        <tr>
+            <td>{{ game.name }}</td>
+            <td>{{ game.description }}</td>
+            <td>{{ game.rating }}</td>
+            <td>{{ game.price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

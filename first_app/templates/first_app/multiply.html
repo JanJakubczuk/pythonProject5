@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td {padding: 10px; border:1px solid black}
+    </style>
+</head>
+<body>
+    <h1>Tabliczka mnożenia {{ elements | length }}</h1>
+    <table>
+        {% for i in elements %}
+        <tr>
+            {% for j in elements %}
+                <td> {% widthratio i 1 j %}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

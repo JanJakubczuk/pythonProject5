@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .player_stats {float: left; width: 50%}
+        td {padding:10px; border:1px solid black}
+        .enemy_stats {float: left; width: 50%}
+    </style>
+</head>
+<body>
+    <table class="player_stats">
+        <tr><td>name <td></td></td></tr>
+        <tr><td>attack <td></td></td></tr>
+        <tr><td>defense <td></td></td></tr>
+        <tr><td>weapon </td><td>{{ def_p_damage }}</td></tr>
+        <tr><td>life hit points </td><td>{{ def_hp_p }}</td></tr>
+    </table>
+
+    <table class="enemy_stats">
+        <tr>
+        <td>name</td>
+        </tr>
+        <tr><td>attack</td></tr>
+        <tr><td>defense</td></tr>
+        <tr><td>weapon</td> <td>{{ def_e_damage }}</td></tr>
+        <tr><td>life hit points </td><td>{{ def_hp_p }}</td></tr>
+    </table>
+
+    {{ elements | safe}}
+
+    {{ result }}
+</body>
+</html>

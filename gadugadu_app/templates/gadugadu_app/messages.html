@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            padding: 20px;
+            border: 1px solid black;
+        }
+        td {
+            padding: 5px;
+            margin-top: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+    {% for message in messages %}
+        <tr>
+            <td>{{ message.sender }}</td>
+            <td>{{ message.description }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

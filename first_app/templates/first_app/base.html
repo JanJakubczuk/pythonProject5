@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'first_app/style.css' %}" />
+    <title>{% block title %} tytul {% endblock %}</title>
+</head>
+<body>
+    {% block logo %} <h1>logo</h1> {% endblock %}
+    {% block main %} Tresc {% endblock %}
+    {% block footer %} <p>utworzono kiedys</p> {% endblock %}
+</body>
+</html>
